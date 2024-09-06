@@ -1,0 +1,68 @@
+@startuml
+'----- Table Description ----
+'Object Colors Setting
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+legend top
+|=        Object  |=           Colors  |
+| Hardware  |<back:sienna>                                    |
+| System  |<back:mediumpurple>                                    |
+| Layer  |<back:#FEE599>                                    |
+| Component |<back:#lightcyan>                                    |
+| Module |<back:#E2EFD9>                                    |
+| Uint |<back:#aquamarine>                                    |
+| Tiny |<back:#pink>                                    |
+'Arrow Function
+|=        Arrow |=        Description |
+| Solid Line (->) | Don't response value  |
+| Dotted Line (--->) | Response value |
+endlegend
+
+skinparam rectangle {
+    BackgroundColor LightSkyBlue
+    BorderColor Black
+}
+
+package "SYSAD-xxx Software" #mediumpurple {
+    package "SWC" #FEE599 {
+        package "SWAD-001 Application" #lightcyan{
+            rectangle "SWAD-001-006\nTask and Schedule" as TaskSchedule #E2EFD9
+            rectangle "SWAD-001-004\nState Machine" as StateMachine #E2EFD9
+            rectangle "SWAD-001-001\nMain" as Main #E2EFD9
+            rectangle "SWAD-001-002\nAPPs Initialization" as AppsInit #E2EFD9
+            rectangle "SWAD-001-006\nTasks Config" as TasksConfig #E2EFD9
+            rectangle "SWAD-001-003\nPinIOs Sensing" as PinIOSensing #E2EFD9
+            rectangle "SWAD-001-007\nClock Source Config" as ClockSourceConfig #E2EFD9
+        }
+    }
+
+    package "BSW" #FEE599 {
+        package "SWAD-004 OS" as OS #lightcyan {
+            rectangle "SWAD-004-001\nfreeRTOS Sources" as freeRTOS #E2EFD9
+        }
+
+        package "SWAD-002 Service" as Service #lightcyan {
+            rectangle "SWAD-002-002\nFuSa" as FuSa #E2EFD9
+            rectangle "SWAD-002-001\nUDS" as UDS #E2EFD9
+            rectangle "SWAD-002-003\nSecurity" as Security #E2EFD9
+        }
+
+        package "SWAD-003 HAL" as HAL #lightcyan {
+            rectangle "SWAD-003-002\nPinIOs Sensing" as HAL_PinIOSensing #E2EFD9
+            rectangle "SWAD-003-001\nClock Source Config" as HAL_ClockSourceConfig #E2EFD9
+        }
+    }
+
+    package "MCAL" #FEE599 {
+        package "SWAD-005 Drivers" as Drivers #lightcyan{
+            rectangle "SWAD-005-002\nPinIOs Sensing" as MCAL_PinIOSensing #E2EFD9
+            rectangle "SWAD-005-001\nClock Source Config" as MCAL_ClockSourceConfig #E2EFD9
+        }
+    }
+}
+
+rectangle "Hardware" as Hardware #sienna
+SWC <--> BSW
+BSW <--> MCAL
+MCAL <--> Hardware
+@enduml
