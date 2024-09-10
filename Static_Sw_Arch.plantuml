@@ -11,7 +11,7 @@ skinparam rectangle {
 
 legend top
 |=        Object  |=           Colors  |
-| Hardware  |<back:#A0522D>                                    |
+| Microcontroller  |<back:#A0522D>                                    |
 | System  |<back:#9370DB>                                    |
 | Layer  |<back:#FEE599>                                    |
 | Component |<back:#E0FFFF>                                    |
@@ -61,10 +61,10 @@ package "SYSAD-xxx Software" #9370DB {
     }
 }
 
-rectangle "Hardware" as Hardware #A0522D
+rectangle "Microcontroller" as MCU #A0522D
 
 SWC <--> BSW
 BSW <--> MCAL
-MCAL <--> Hardware
+MCAL <--> MCU
 
 @enduml
