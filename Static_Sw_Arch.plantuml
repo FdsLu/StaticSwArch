@@ -10,18 +10,14 @@ skinparam rectangle {
 }
 
 legend top
-|= Object    |= Colors                                         |
-| Hardware   |<back:#A0522D>                                   |
-| System     |<back:#9370DB>                                   |
-| Layer      |<back:#FEE599>                                   |
-| Component  |<back:#E0FFFF>                                   |
-| Module     |<back:#E2EFD9>                                   |
-| Unit       |<back:#7FFFD4>                                   |
-| Tiny       |<back:#FFC0CB>                                   |
-'Arrow Function
-|= Arrow          |= Description        |
-| Solid Line (->)  | Don't response value |
-| Dotted Line (-->) | Response value      |
+|=        Object  |=           Colors  |
+| Hardware  |<back:#A0522D>                                    |
+| System  |<back:#9370DB>                                    |
+| Layer  |<back:#FEE599>                                    |
+| Component |<back:#E0FFFF>                                    |
+| Module |<back:#E2EFD9>                                    |
+| Uint |<back:#7FFFD4>                                    |
+| Tiny |<back:#FFC0CB>                                    |
 endlegend
 
 package "SYSAD-xxx Software" #9370DB {
