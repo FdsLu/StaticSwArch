@@ -48,7 +48,7 @@ package "SYSAD-xxx Software" #9370DB {
         }
 
         package "SWAD-004 OS" as OS #E0FFFF {
-            rectangle "SWAD-004-001\nfreeRTOS Sources" as freeRTOS #E2EFD9
+            rectangle "freeRTOS Modules" as freeRTOS #E2EFD9
         }
     }
 
