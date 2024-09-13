@@ -31,6 +31,10 @@ package "SYSAD-xxx Software" #9370DB {
             rectangle "SWAD-001-006\nTask and Schedule" as TaskSchedule #E2EFD9
             rectangle "SWAD-001-007\nTasks Config" as TasksConfig #E2EFD9
             rectangle "SWAD-001-008\nClock Source Config" as ClockSourceConfig #E2EFD9
+            rectangle "SWAD-001-009\nCommunication Management" as CommunicationManagement #E2EFD9
+            rectangle "SWAD-001-010\nCAN Management" as CANManagement #E2EFD9
+            rectangle "SWAD-001-011\nUART Management" as UARTManagement #E2EFD9
+            rectangle "SWAD-001-012\nFlash Management" as FlashManagement #E2EFD9
         }
     }
 
@@ -45,6 +49,10 @@ package "SYSAD-xxx Software" #9370DB {
             rectangle "SWAD-003-001\nClock Source Config" as HAL_ClockSourceConfig #E2EFD9
             rectangle "SWAD-003-002\nPinIOs Sensing" as HAL_PinIOSensing #E2EFD9
             rectangle "SWAD-003-003\nPower Config" as HAL_PowerConfig #E2EFD9
+            rectangle "SWAD-003-004\nCAN" as HAL_CAN #E2EFD9
+            rectangle "SWAD-003-005\nUART" as HAL_UART #E2EFD9
+            rectangle "SWAD-003-006\nFLS" as HAL_FLS #E2EFD9
+            rectangle "SWAD-003-007\nFEE" as HAL_FEE #E2EFD9
         }
 
         package "SWAD-004 OS" as OS #E0FFFF {
@@ -57,6 +65,10 @@ package "SYSAD-xxx Software" #9370DB {
             rectangle "SWAD-005-001\nClock Source Config" as MCAL_ClockSourceConfig #E2EFD9
             rectangle "SWAD-005-002\nPinIOs Sensing" as MCAL_PinIOSensing #E2EFD9
             rectangle "SWAD-005-003\nPower Config" as MCAL_PowerConfig #E2EFD9
+            rectangle "SWAD-005-004\nCAN" as MCAL_CAN #E2EFD9
+            rectangle "SWAD-005-005\nUART" as MCAL_UART #E2EFD9
+            rectangle "SWAD-005-006\nFLS" as MCAL_FLS #E2EFD9
+            rectangle "SWAD-005-007\nFEE" as MCAL_FEE #E2EFD9
         }
     }
 }
